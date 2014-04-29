@@ -80,7 +80,8 @@ class LogFormatter(logging.Formatter):
     `tornado.options.parse_command_line` (unless ``--logging=none`` is
     used).
     """
-    DEFAULT_FORMAT = '%(color)s[%(levelname)1.1s %(asctime)s %(module)s:%(lineno)d]%(end_color)s %(message)s'
+    # DEFAULT_FORMAT = '%(color)s[%(levelname)1.1s %(asctime)s %(module)s:%(lineno)d]%(end_color)s %(message)s'
+    DEFAULT_FORMAT = '%(color)s[%(levelname)1.1s %(asctime)s %(lineno)4d: %(module)s f:%(funcName)s t:%(name)s]%(end_color)s %(message)s'
     DEFAULT_DATE_FORMAT = '%y%m%d %H:%M:%S'
     DEFAULT_COLORS = {
         logging.DEBUG:      4,  # Blue
